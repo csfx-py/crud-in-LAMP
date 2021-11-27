@@ -24,4 +24,6 @@ It may vary from distro to distro but the basic gist would be
 
 - Fix the credentials to db in `api/config.php`
 
+- If your php projects are hosted on any port apart from 80, change the `url` in `frontend/crud.js` 
+
 - Open `frontend/index.html` in browser
