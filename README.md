@@ -14,7 +14,7 @@ It may vary from distro to distro but the basic gist would be
 
 - Clone the repo with `git clone` command using https/ssh link to desired location
 
-- Place `api` folder in php projects folder (Usually `/srv/http/` or `var/www`)
+- Place `api` folder in php projects folder (Usually `/srv/http/` or `/var/www`)
 
 - Place `frontend` folder in any directory
 
