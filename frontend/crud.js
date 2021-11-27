@@ -38,7 +38,6 @@ const getUsers = async () => {
 
   const content = await raw.json();
 
-  // map through the data and create a list for each user
   content.map((user) => {
     const ul = document.createElement("ul");
     ul.innerHTML = `<li>First name: ${user.first_name}</li>
