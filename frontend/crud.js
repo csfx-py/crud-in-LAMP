@@ -38,14 +38,20 @@ const getUsers = async () => {
 
   const content = await raw.json();
 
-  content.map((user) => {
-    const ul = document.createElement("ul");
-    ul.innerHTML = `<li>First name: ${user.first_name}</li>
+  if (!content.length) {
+    document.getElementById(
+      "result"
+    ).innerHTML = `<div class="error">No users found</div>`;
+  } else {
+    content.map((user) => {
+      const ul = document.createElement("ul");
+      ul.innerHTML = `<li>First name: ${user.first_name}</li>
                     <li>Last name: ${user.last_name}</li>
                     <li>Address: ${user.address}</li>
                     <li>Email: ${user.email}</li>`;
-    document.getElementById("result").appendChild(ul);
-  });
+      document.getElementById("result").appendChild(ul);
+    });
+  }
 };
 
 const updateUser = async () => {
